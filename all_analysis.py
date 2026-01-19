@@ -31,3 +31,5 @@ print(surv)
 
 print(tt.groupby('Sex')['Age'].agg(['mean', 'median'])) # средние значения по соотношению пол-возраст
 
+tt = tt.rename(columns = {'Pclass':'Class'})
+tt.to_csv('Titanic-new.csv', index = True)
